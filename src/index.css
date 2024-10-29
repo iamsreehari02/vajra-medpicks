@@ -1,13 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Raleway;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 47px;
+}
+
+h3 {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 29.35px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 23.48px;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 21.13px;
+}
+
+h6 {
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 21.13px;
+}
+
+p {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 15.26px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2d2d2d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff8c00;
 }
