@@ -1,12 +1,18 @@
-import "./App.css";
-import Sidebar from "./components/sidebar/Sidebar";
+import React from "react";
+import Wrapper from "./components/pageWrapper/Wrapper";
+import "primereact/resources/themes/saga-blue/theme.css";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <Sidebar />
-    </div>
+    <Wrapper activeTab="Home">
+      {" "}
+      {/* Pass the active tab here */}
+      {/* Main content goes here */}
+      {/* You can add more components here as needed */}
+    </Wrapper>
   );
-}
+};
 
 export default App;

@@ -4,9 +4,14 @@ import { sideBarFooterButtons, sidebarTabs } from "../../utils/data";
 import LOGO from "../../assets/images/vajraLogo.png";
 import { COLORS, IMG_ALT } from "../../constants/Constants";
 import CustomButton from "../customButton/CustomButton";
+import styles from "./Sidebar.module.css";
 
-const Sidebar = () => {
+const Sidebar = ({ onTabChange, activeTab }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleTabClick = (tab) => {
+    onTabChange(tab);
+  };
 
   return (
     <div className="flex h-screen">
@@ -30,9 +35,14 @@ const Sidebar = () => {
             <div
               key={tab.id}
               className="flex align-middle gap-6 cursor-pointer py-4"
+              onClick={() => handleTabClick(tab.key)}
             >
               <img src={tab.icon} alt={tab.alt} />
-              <h5>{tab.tabName}</h5>
+              <h5
+                className={`${activeTab === tab.key ? styles.activeTab : null}`}
+              >
+                {tab.tabName}
+              </h5>
             </div>
           ))}
         </nav>
@@ -47,19 +57,19 @@ const Sidebar = () => {
               fontColor={COLORS.GRAY}
               borderWidth={1}
               borderColor={COLORS.GRAY}
+              minWidth={183}
             />
           ))}
         </div>
       </div>
 
-      <div className="flex-1 p-4 md:ml-20 lg:ml-64">
+      <div className="flex-1 p-4 md:ml-20 lg:ml-56">
         <button
           className="p-2 text-gray-800 bg-gray-100 rounded md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
           <FiMenu size={24} />
         </button>
-        <h1 className="text-2xl font-semibold">Welcome to the Dashboard</h1>
       </div>
     </div>
   );

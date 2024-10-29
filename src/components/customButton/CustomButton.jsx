@@ -12,6 +12,7 @@ const CustomButton = ({
   showArrow = false,
   icon = null,
   onClick,
+  minWidth,
 }) => {
   return (
     <button
@@ -23,12 +24,12 @@ const CustomButton = ({
         borderWidth: borderWidth,
         borderColor: borderColor,
         borderRadius: "22px",
-        minWidth: "183px",
+        minWidth: minWidth,
       }}
       className={`flex items-center justify-start border rounded px-9 py-2 transition duration-200 hover:opacity-90 gap-4`}
     >
       {icon && <img src={icon} alt={IMG_ALT.FOOTER_BUTTON_ICON} />}
-      <h6>{label}</h6>
+      <h4 className="text-center text-sm">{label}</h4>
       {showArrow && <AiOutlineArrowRight className="ml-2" />}
     </button>
   );

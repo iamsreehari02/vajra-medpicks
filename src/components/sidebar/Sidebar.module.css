@@ -1,3 +1,7 @@
 .sidebar {
   background: #1b2535;
 }
+
+.activeTab {
+  color: #ff6b00;
+}

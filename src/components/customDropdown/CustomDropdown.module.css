@@ -1,0 +1,23 @@
+.customDropdown {
+  background-color: white;
+  border-radius: 40px;
+  padding-inline: 1rem;
+  min-width: 189px;
+}
+
+.ccustomDropdown .p-dropdown {
+  border: none;
+}
+
+.customDropdown .p-dropdown-label {
+  border: none;
+  padding: 10px 20px;
+}
+
+.customDropdown.p-dropdown-panel {
+  border-radius: 40px;
+}
+
+.customDropdown .p-dropdown-panel .p-dropdown-item {
+  padding: 10px 20px;
+}
